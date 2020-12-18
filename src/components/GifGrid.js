@@ -13,16 +13,14 @@ export const GifGrid = ({category}) => {
             {loading && <p className="animate__animated animate__slideOutUp">Loading</p>}
 
             <div className="card-grid">
-                <ol>
-                    {
-                    images.map(img => (
-                        <GifGridItem 
-                            key= {img.id}
-                            {...img}
-                        />
-                    ))
-                    }
-                </ol>
+                {
+                images.map(img => (
+                    <GifGridItem 
+                        key= {img.id}
+                        {...img}
+                    />
+                ))
+                }
             </div>
         </>
 
